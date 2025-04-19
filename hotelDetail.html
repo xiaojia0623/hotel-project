@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/hotel-project/assets/favicon-19deb09f.ico" type="image/x-icon" />
+<!-- google icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- nouislider CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css">
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+<!-- Bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- aos 動畫 -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<!-- google 字體 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">    <title>飯店房型介紹</title>
+    <script type="module" crossorigin src="/hotel-project/assets/main-6e049725.js"></script>
+    <link rel="stylesheet" href="/hotel-project/assets/main-fd56e2b9.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1><a class="navbar-brand text-primary fw-bold" href="index.html">悠宿 EasyStay</a></h1>
+        <a class="nav-link header-text roboto ms-5 fw-bold d-block d-md-none d-lg-none" aria-current="page" href="loginPage.html">Login</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="filterSearchPage.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="aboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="signUpPage.html">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-text roboto ms-5 fw-bold d-md-block d-none" aria-current="page" href="loginPage.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="searchzone">
+  <div class="container">
+    <!-- 測試 -->
+    <div class="hotelWebSearch">
+      <form action="" class="d-flex align-items-center">
+        <div class="searchcountry d-flex align-items-center bg-white">
+            <i class="fa-solid fa-location-dot icon"></i>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Bangkok">
+              <label for="floatingInput" class="fw-bold">Destination</label>
+            </div>
+        </div>
+
+        <div class="searchDate d-flex align-items-center">
+          <div class="searchDateBegin bg-white" style="border-radius: 5px;">
+            <label for="checkInDate" class="fw-bold">開始日期</label>
+            <input type="date" id="checkInDate" class="form-control checkInDate">
+          </div>
+          <div class="searchDateEnd bg-white" style="border-radius: 5px;">
+            <label for="checkOutDate" class="fw-bold">退房日期</label>
+            <input type="date" id="checkOutDate" class="form-control checkOutDate">
+          </div>
+        </div>
+       
+
+        
+
+        <div class="searchGuest d-flex align-items-center bg-white">
+            <i class="fa-solid fa-user icon"></i>
+            <div class="form-floating searchSelect d-flex align-items-center">
+              <select class="form-select" id="adultsSelect" aria-label="Adults">
+                  <option value="1">1 adult</option>
+                  <option value="2" selected>2 adults</option>
+                  <option value="3">3 adults</option>
+                  <option value="4">4 adults</option>
+              </select>
+
+              <select class="form-select" id="roomsSelect" aria-label="Rooms">
+                  <option value="1" selected>1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                  <option value="4">4 rooms</option>
+              </select>
+              <label for="adultsSelect" class="fw-bold text-dark">Guests</label>
+            </div>
+        </div>
+        <div class="searchbtn">
+            <a href="#index.html" class="btn btn-primary fw-bold open-sans text-uppercase">search</a>
+        </div>
+      </form>
+      <p id="summary" class="mt-0">Bangkok・17 June - 19 June・2 adults・1 room</p>
+    </div>
+    
+    
+    <!-- 手機顯示2 -->
+    <div class="hotelDetailMobile">
+      <div class="d-flex align-items-center">
+        <a href="index.html"><i class="fas fa-arrow-left me-3"></i></a>
+        <p class="p-0 m-0">Bangkok・17 June - 19 June・2 adults・1 room</p>
+      </div>
+    </div>
+    <!-- 手機顯示1 -->
+    <div class="hotelFilterMobile">
+      <ul class="list-unstyled d-flex align-items-center">
+        <li>
+          <p class="m-0"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    <!-- 網頁版 -->
+    <div class="hotel-detail d-none d-md-block d-lg-block">
+      <div class="container">
+        <div class="row d-flex hotel-gollery">
+          <!-- 大左圖 -->
+          <div class="col mainImage">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="">
+          </div>
+          <!-- 大右圖 -->
+          <div class="col">
+            <div class="row flex-column gap-2">
+              <!-- 右上圖 -->
+              <div class="col rightImage">
+                <img src="https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="">
+              </div>
+              <!-- 右下圖 -->
+              <div class="col">
+                <div class="row d-md-flex gap-2">
+                  <!-- 右下y左圖 -->
+                  <div class="col rightBottomImage">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="">
+                  </div>
+                  <!-- 右下右圖 -->
+                  <div class="col rightBottomrightImage d-md-flex flex-column  gap-2">
+                    <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="">
+                    <button class="btn btn-dark text-uppercase">see all 10 photos</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 手機版 -->
+    <div class="hotel-detail-mobile d-block d-md-none d-lg-none">
+      <div class="container p-0">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWx8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWx8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWx8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-content">
+      <div class="container">
+        <div class="content-title">
+          <h2>山月居 Moonhill Retreat</h2>
+          <div class="hotelstar-rate">
+            <ul class="list-unstyled">
+              <li><i class="fa-solid fa-star staricon"></i></li>
+              <li><i class="fa-solid fa-star staricon"></i></li>
+              <li><i class="fa-solid fa-star staricon"></i></li>
+              <li><i class="fa-solid fa-star staricon"></i></li>
+            </ul>
+            <span>4.0 (283)</span>
+          </div>
+        </div>
+        <p class="hotel-address">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</p>
+        <div class="row justify-content-start">
+          <div class="col col-md-6">
+            <p class="hotel-intro fw-bold fs-6">
+              隱身於青山與雲霧之間，山月居是一處遠離塵囂的靜謐旅宿。晨起雲海繚繞，夜晚則可見滿月緩緩升起於山巒之上，
+              彷彿時間在此慢了下來。客房以原木與石材為基底，搭配手作燈飾與自然紋理，呈現低調而溫暖的空間美學。無論是獨自閱讀、
+              靜坐泡茶，或在山徑間慢行，這裡都是一場回歸心靈的療癒之旅。餐廳提供在地旬食，以簡單自然的方式，還原食材的原味。
+              山月居不是奢華的所在，而是一個讓你與自己對話、與自然共處的地方。
+              讓心，慢下來；讓月，照進來。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-select-room">
+      <div class="container">
+        <h2>Select your room</h2>
+        <div class="choices-room-filter">
+          <p id="summary" class="mt-0"><span>Bangkok</span><span>17 June - 19 June</span><span>2 adults・1 room</span></p>
+          <a href="#" type="button" class="btn btn-outline-primary text-uppercase">edit detail</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-room-type">
+      <div class="container">
+        <!-- 網頁版 -->
+        <table class="table">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">房型</th>
+              <th scope="col">人數</th>
+              <th scope="col">價格</th>
+              <th scope="col">房數</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="align-middle">
+              <td>
+                <div class="room-info">
+                  <img src="https://media.istockphoto.com/id/1486803188/photo/the-minimalist-bedroom-interior-with-sea-view-in-sunset-time.webp?a=1&b=1&s=612x612&w=0&k=20&c=LyJltUfnpaug8BOq9O4yFJ4jPVUWME9dto9zZgHKMm8=" alt="雲嶺和風房">
+                  <div class="roomtype-intro">
+                    <h5>雲嶺和風房 Cloud Ridge Room</h5>
+                    <p>1 bed (Queen size)</p>
+                    <div class="features">
+                      <ul class="room-features">
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-wifi me-2"></i><p>Wi-Fi</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-utensils me-2"></i><p>Breakfast</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-tv me-2"></i><p>Television</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-fan me-2"></i><p>Air Conditioner</p></li>
+                      </ul>
+                      <ul class="room-features">
+                        <li class="d-flex align-items-center"><span class="me-2 fs-5">🍽</span><p>Room Service</p></li>
+                        <li class="d-flex align-items-center"><span class="me-2 fs-5">🚭</span><p>Smoke Free</p></li>
+                      </ul>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user"></i>
+              </td>
+              <td>
+                <div class="room-price">
+                  <span class="text-decoration-line-through text-muted mb-0">TWD 1,600</span>
+                  <p class="text-dark fw-bold me-2 mb-0">TWD<span class="text-primary">1,490</span></p>
+                  <small class="text-secondary">per night</small>
+                </div>
+                
+              </td>
+              <td class="text-center">
+                <div class="quantity-control">
+                  <button class="btn btn-outline-dark minus-btn">-</button>
+                  <span class="quantity">0</span>
+                  <button class="btn btn-outline-dark plus-btn">+</button>
+              </div>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <td>
+                <div class="room-info">
+                  <img src="https://images.unsplash.com/photo-1521685678779-493ab62ccec5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzEyfHxNb29udmlldyUyMExvZnR8ZW58MHx8MHx8fDA%3D" alt="月影景觀房">
+                  <div class="roomtype-intro">
+                    <h5>月影景觀房 Moonview Loft</h5>
+                    <p>1 bed (Queen size)</p>
+                    <div class="features">
+                      <ul class="room-features">
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-wifi me-2"></i><p>Wi-Fi</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-utensils me-2"></i><p>Breakfast</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-tv me-2"></i><p>Television</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-fan me-2"></i><p>Air Conditioner</p></li>
+                      </ul>
+                      <ul class="room-features">
+                        <li class="d-flex align-items-center"><span class="me-2 fs-5">🍽</span><p>Room Service</p></li>
+                        <li class="d-flex align-items-center"><span class="me-2 fs-5">🚭</span><p>Smoke Free</p></li>
+                      </ul>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user"></i>
+              </td>
+              <td>
+                <div class="room-price">
+                  <p class="text-dark fw-bold fs-5 me-2 mb-0">TWD 1,600</p>
+                  <small class="text-secondary">per night</small>
+                </div>
+                
+              </td>
+              <td class="text-center">
+                <div class="quantity-control">
+                  <button class="btn btn-outline-dark minus-btn">-</button>
+                  <span class="quantity">0</span>
+                  <button class="btn btn-outline-dark plus-btn">+</button>
+              </div>
+              </td>
+            </tr>
+            <tr class="align-middle">
+              <td>
+                <div class="room-info">
+                  <img src="https://plus.unsplash.com/premium_photo-1684445035420-cc3aae0560cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fEZvcmVzdCUyMENvdXJ0eWFyZCUyMFN1aXRlfGVufDB8fDB8fHww" alt="木語庭園套房">
+                  <div class="roomtype-intro">
+                    <h5>木語庭園套房 Forest Courtyard Suite</h5>
+                    <p>1 bed (Queen size)</p>
+                    <div class="features">
+                      <ul class="room-features">
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-wifi me-2"></i><p>Wi-Fi</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-utensils me-2"></i><p>Breakfast</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-tv me-2"></i><p>Television</p></li>
+                        <li class="d-flex align-items-center"><i class="fa-solid fa-fan me-2"></i><p>Air Conditioner</p></li>
+                      </ul>
+                      <ul class="room-features">
+                        <li class="d-flex align-items-center"><span class="me-2 fs-5">🍽</span><p>Room Service</p></li>
+                        <li class="d-flex align-items-center"><span class="me-2 fs-5">🚭</span><p>Smoke Free</p></li>
+                      </ul>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user"></i>
+              </td>
+              <td>
+                <div class="room-price">
+                  <p class="text-dark fw-bold fs-5 me-2 mb-0">TWD 1,980</p>
+                  <small class="text-secondary">per night</small>
+                </div>
+                
+              </td>
+              <td class="text-center">
+                <div class="quantity-control">
+                  <button class="btn btn-outline-dark minus-btn">-</button>
+                  <span class="quantity">0</span>
+                  <button class="btn btn-outline-dark plus-btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">+</button>
+              </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 手機版 -->
+         <div class="d-block d-md-none">
+          <div class="card">
+            <div class="g-0 d-flex justify-content-center">
+              <div>
+                <img src="https://media.istockphoto.com/id/1486803188/photo/the-minimalist-bedroom-interior-with-sea-view-in-sunset-time.webp?a=1&b=1&s=612x612&w=0&k=20&c=LyJltUfnpaug8BOq9O4yFJ4jPVUWME9dto9zZgHKMm8=" class="img-fluid" alt="雲嶺和風房">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">雲嶺和風房 Cloud Ridge Room</h5>
+                <p>1 bed (Queen size)</p>
+                <ul class="room-features">
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-wifi me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-utensils me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tv me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-fan me-2"></i></li>
+                  <li class="d-flex align-items-center"><span class="me-2 fs-5">🍽</span></li>
+                  <li class="d-flex align-items-center"><span class="me-2 fs-5">🚭</span></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-user"></i>
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer align-items-center d-flex justify-content-between">
+              <div class="quantity-control d-flex ">
+                <button class="btn btn-outline-dark minus-btn">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-outline-dark plus-btn">+</button>
+              </div>
+              <div class="mobile-room-price">
+                <p class="throuth-price text-decoration-line-through text-muted mb-0">TWD 1,600</p>
+                <p class="room-newprice text-dark fw-bold mb-0">TWD<span class="text-primary">1,490</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="g-0 d-flex justify-content-center">
+              <div>
+                <img src="https://images.unsplash.com/photo-1521685678779-493ab62ccec5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzEyfHxNb29udmlldyUyMExvZnR8ZW58MHx8MHx8fDA%3D" class="img-fluid" alt="月影景觀房">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">月影景觀房 Moonview Loft</h5>
+                <p>1 bed (Queen size)</p>
+                <ul class="room-features">
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-wifi me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-utensils me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tv me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-fan me-2"></i></li>
+                  <li class="d-flex align-items-center"><span class="me-2 fs-5">🍽</span></li>
+                  <li class="d-flex align-items-center"><span class="me-2 fs-5">🚭</span></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-user"></i>
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer align-items-center d-flex justify-content-between">
+              <div class="quantity-control d-flex ">
+                <button class="btn btn-outline-dark minus-btn">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-outline-dark plus-btn">+</button>
+              </div>
+              <div class="mobile-room-price">
+                <p class="room-newprice text-dark fw-bold mb-0">TWD 1,600</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="g-0 d-flex justify-content-center">
+              <div>
+                <img src="https://plus.unsplash.com/premium_photo-1684445035420-cc3aae0560cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fEZvcmVzdCUyMENvdXJ0eWFyZCUyMFN1aXRlfGVufDB8fDB8fHww" class="img-fluid" alt="木語庭園套房">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">木語庭園套房 Forest Courtyard Suite</h5>
+                <p>1 bed (Queen size)</p>
+                <ul class="room-features">
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-wifi me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-utensils me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tv me-2"></i></li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-fan me-2"></i></li>
+                  <li><span class="material-symbols-outlined">kitchen</span></li>
+                  <li class="d-flex align-items-center"><span class="me-2 fs-5">🍽</span></li>
+                  <li><span class="material-symbols-outlined">local_bar</span></li>
+                  <li class="d-flex align-items-center"><span class="me-2 fs-5">🚭</span></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-user"></i>
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer align-items-center d-flex justify-content-between">
+              <div class="quantity-control d-flex ">
+                <button class="btn btn-outline-dark minus-btn">-</button>
+                <span class="quantity">0</span>
+                <button class="btn btn-outline-dark plus-btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">+</button>
+              </div>
+              <div class="mobile-room-price">
+                <p class="room-newprice text-dark fw-bold mb-0">TWD 1,600</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 訂閱區塊 Home Subscribe -->
+    <div class="hotel-subscribe">
+      <div class="container">
+        <h3 class="fw-bold">Subscribe for<br/> Exclusive Offer</h3>
+        <form action="">
+          <input type="email" name="address" class="form-control" placeholder="Your email address" autocomplete="email">
+          <button type="submit" class="btn btn-primary text-uppercase">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>© 2020 ALOHA, Inc. All rights reserved.</p>
+            <ul class="list-unstyled">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-dropdown">
+            <div class="footer-select mr-3">
+                <i class="fa-solid fa-globe"></i>
+                <select class="custom-select form-select" name="language" id="language-select" aria-label="Select language">
+                    <option selected>English</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </div>
+            <div class="footer-select">
+                <i class="fa-solid fa-dollar-sign fw-bold"></i>
+                <select class="custom-select form-select" name="currency" id="currency-select" aria-label="Select currency">
+                    <option selected>TWD</option>
+                    <option value="HK">HK</option>
+                    <option value="JP">JP</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+    
+<div class="offcanvas offcanvas-bottom h-auto showamount" style="background-color: none;" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-body show-amount small">
+        <div class="container">
+            <div class="room-price">
+                <span>1 room · 2 night</span>
+                <p>TWD 3,960</p>
+            </div>
+            <div class="room-price-btns">
+                <a href="#" class="btn btn-outline-light text-uppercase">cancel</a>
+                <a href="reservationDetails.html" class="btn btn-primary text-uppercase">reserve</a>
+            </div>
+        </div>
+    </div>
+  </div>    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="searchzoneInput.js"></script>
+    
+  </body>
+</html>
