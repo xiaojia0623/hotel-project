@@ -1,0 +1,71 @@
+<div class="searchzone">
+  <div class="container">
+    <!-- 測試 -->
+    <div class="hotelWebSearch">
+      <form action="" class="d-flex align-items-center">
+        <div class="searchcountry d-flex align-items-center bg-white">
+            <i class="fa-solid fa-location-dot icon"></i>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Bangkok">
+              <label for="floatingInput" class="fw-bold">Destination</label>
+            </div>
+        </div>
+
+        <div class="searchDate d-flex align-items-center">
+          <div class="searchDateBegin bg-white" style="border-radius: 5px;">
+            <label for="checkInDate" class="fw-bold">開始日期</label>
+            <input type="date" id="checkInDate" class="form-control checkInDate">
+          </div>
+          <div class="searchDateEnd bg-white" style="border-radius: 5px;">
+            <label for="checkOutDate" class="fw-bold">退房日期</label>
+            <input type="date" id="checkOutDate" class="form-control checkOutDate">
+          </div>
+        </div>
+       
+
+        
+
+        <div class="searchGuest d-flex align-items-center bg-white">
+            <i class="fa-solid fa-user icon"></i>
+            <div class="form-floating searchSelect d-flex align-items-center">
+              <select class="form-select" id="adultsSelect" aria-label="Adults">
+                  <option value="1">1 adult</option>
+                  <option value="2" selected>2 adults</option>
+                  <option value="3">3 adults</option>
+                  <option value="4">4 adults</option>
+              </select>
+
+              <select class="form-select" id="roomsSelect" aria-label="Rooms">
+                  <option value="1" selected>1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                  <option value="4">4 rooms</option>
+              </select>
+              <label for="adultsSelect" class="fw-bold text-dark">Guests</label>
+            </div>
+        </div>
+        <div class="searchbtn">
+            <a href="#index.html" class="btn btn-primary fw-bold open-sans text-uppercase">search</a>
+        </div>
+      </form>
+      <p id="summary" class="mt-0">Bangkok・17 June - 19 June・2 adults・1 room</p>
+    </div>
+    
+    
+    <!-- 手機顯示2 -->
+    <div class="hotelDetailMobile">
+      <div class="d-flex align-items-center">
+        <a href="index.html"><i class="fas fa-arrow-left me-3"></i></a>
+        <p class="p-0 m-0">Bangkok・17 June - 19 June・2 adults・1 room</p>
+      </div>
+    </div>
+    <!-- 手機顯示1 -->
+    <div class="hotelFilterMobile">
+      <ul class="list-unstyled d-flex align-items-center">
+        <li>
+          <p class="m-0"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

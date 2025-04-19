@@ -1,0 +1,20 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import './utils/variables';
+@import "../../node_modules/bootstrap";
+
+@import './utils/utlis';
+
+@import './layout/header';
+@import './layout/footer';
+@import './layout/topButton';
+@import './layout/searchzone';
+@import './layout/showamount';
+
+@import './pages/index.scss';
+@import './pages/filterSearchPage';
+@import './pages/hotelDetail';
+@import './pages/loginPage';
+@import './pages//reservationDetails';
+@import './pages/reservationReceived';
+@import './pages/myBookingPage';
+@import './pages/aboutus';

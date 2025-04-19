@@ -1,0 +1,101 @@
+// .show-amount{
+//     background-color: #000000DE;
+//     padding: 27px 85px;
+//     border-radius: 8px 8px 0 0;
+//     .container{
+//         display: flex;
+//         justify-content: space-between;
+//         .room-price{
+//             span{
+//                 font-size: 12px;
+//                 color: #FFFFFF98;
+//             }
+//             p{
+//                 font-size: 24px;
+//                 color: #FFFFFFDD;
+//                 font-weight: bold;
+//                 font-family: "Raleway", serif;
+//             }
+//         }
+//         .room-price-btns{
+//             gap: 8px;
+//             display: flex;
+//             align-items: center;
+//             .btn{
+//                 border-radius: 4px;
+//                 padding: 17px 32px;
+//             }
+//         }
+//     }
+// }
+.offcanvas{
+    border-radius: 8px 8px 0 0;
+    //padding: 24px 85px;
+    background-color: #000000DE;
+    border: none;
+    padding: 0;
+    .show-amount{
+        padding: 24px 85px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            .room-price{
+                span{
+                    font-size: 12px;
+                    color: #FFFFFF98;
+                }
+                p{
+                    font-size: 24px;
+                    color: #FFFFFFDD;
+                    font-weight: bold;
+                    font-family: "Raleway", serif;
+                }
+            }
+            .room-price-btns{
+                gap: 8px;
+                display: flex;
+                align-items: center;
+                .btn{
+                    border-radius: 4px;
+                    padding: 17px 32px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px){
+    .offcanvas {
+        .show-amount{
+            padding: 24px 39px;
+        }
+    }
+    
+}
+
+
+
+
+@media (max-width:768px) {
+    .offcanvas{
+        .show-amount{
+            padding: 24px 15px;
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .room-price{
+                text-align: end;
+            }
+            .room-price-btns{
+                width: 100%;
+                .btn{
+                    width: 100%;
+                    padding: 17px 47px;
+                }
+            }
+        }
+    }
+    
+    
+}

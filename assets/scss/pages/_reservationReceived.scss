@@ -1,0 +1,97 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 頁面最小高度為視窗高度 */
+}
+.reservation-received{
+    margin-top: 24px;
+    flex: 1;
+    .container{
+        max-width: 730px;
+        margin: 0 auto;
+        .list-group{
+            margin-bottom: 24px;
+            .list-group-item{
+                padding: 24px 0;
+                border: none;
+                border-bottom: 1px solid #F1F0F8;
+                h2{
+                    font-family: "Raleway", serif;
+                    font-size: 32px;
+                }
+                .received-title{
+                    font-weight: bold;
+                    color: #000000DE;
+                    font-family: "Open Sans", serif;
+                    margin-right: 106px;
+                    width:  85px;
+                }
+                p{
+                    text-align: start;
+                    margin-bottom: 17px;
+                }
+                .received-content{
+                    text-align: start;
+                    color: #00000099;
+                    font-size: 16px;
+                    span{
+                        color: #6C51E2;
+                        font-size: 12px;
+                        font-family: "Open Sans", serif;
+                        margin-bottom: 17px;
+                    }
+                }
+            }
+        }
+        .received-botton{
+            display: flex;
+            justify-content: end;
+            gap:8px;
+            margin-top: 24px;
+            .btn{
+                padding: 17px 32px;
+                height: 56px;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .wrapper{
+        .reservation-received{
+            .list-group{
+                .list-group-item{
+                    h2{
+                        font-size: 24px;
+                    }
+                    .received-title{
+                        font-size: 14px;
+                    }
+                    .received-content{
+                        margin-bottom: 16px;
+                        font-size: 14px;
+                        span{
+                            font-size: 12px;
+                        }
+                        p{
+                            margin-bottom: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    .received-title{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .received-botton{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+}

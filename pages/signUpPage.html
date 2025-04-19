@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./layout/head'); -%>
+    <title>註冊頁面</title>
+</head>
+<body>
+    <div class="wrapper">
+        <%- include('./layout/header'); -%>
+        
+        <div class="container">
+            <form id="signupForm" class="form-signup needs-validation" novalidate>
+                <h2 class="text-center mb-4">註冊帳號</h2>
+            
+                <div class="mb-3">
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" class="form-control" id="name" required>
+                    <div class="invalid-feedback">請輸入姓名</div>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">請輸入有效的 Email</div>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="password" class="form-label">密碼</label>
+                    <input type="password" class="form-control" id="password" required pattern=".{8,12}">
+                    <div class="invalid-feedback">密碼需為 8-12 位字元</div>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">確認密碼</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                    <div class="invalid-feedback">請再次輸入相同密碼</div>
+                </div>
+            
+                <button type="submit" class="btn text-white fw-bold btn-primary w-100">註冊</button>
+            </form>
+        </div>
+
+        <%- include('./layout/nodropfooter'); -%>
+    </div>
+
+    <!-- ✅ Toast 通知 -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+        <div id="successToast" class="toast bg-success text-white" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">註冊成功！即將跳轉至登入頁...</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/signUp.js"></script>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>

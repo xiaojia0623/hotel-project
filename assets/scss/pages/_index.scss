@@ -1,0 +1,389 @@
+// 設定變數
+$button-size: 24px;
+$arrow-size: 16px; // 控制箭頭大小
+$button-bg-color: #F1F0F8;
+$disabled-opacity: 0.5;
+$disabled-pointer-events: none;
+
+
+//首頁banner
+.home-carousel-banner{
+    max-height: 320px;
+    .carousel-item{
+        height: 320px;
+        img{
+            object-fit: cover;
+        }
+        .carousel-caption{
+            bottom: 7rem;
+            h1{
+              font-weight: bold;
+              font-family: "Open Sans", serif;
+            }
+        }
+    }
+}
+
+//首頁搜尋區塊
+.banner-searchbox{
+    height:104px;
+    .container{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+    form{
+      padding:24px 26px;
+      background-color: #F1F0F8;
+      border-radius: 8px;
+      margin-top: -50px;
+      gap: 20px;
+      z-index: 6;
+      align-items:center;
+      .inputWithin{
+        align-items:center;
+        display: flex;
+        background-color: white;
+        .icon{
+          margin-right:16px;
+          font-size: 24px;
+          background: white;
+        }
+        input{
+          border:none;
+          outline:none;
+          height:56px;
+          width:100%;
+        }
+      }
+      .searchbtn{
+        width:100%;
+        margin:0;
+        padding:0;
+        .btn{
+          height: 56px;
+          width:100%;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+}
+
+//首頁熱門挑選區塊
+.home-top-choices{
+  padding-top: 66px;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: 72px;
+  h3{
+    font-size: 32px;
+  }
+  .tabs {
+    display: flex;
+    flex-wrap: wrap; // make sure it wraps
+    label {
+      font-family: "Raleway", serif;
+      order: 1; // Put the labels first
+      display: block;
+      padding: 1rem 2rem;
+      margin-right: 0.2rem;
+      cursor: pointer;
+      text-align: center;
+      border-bottom: 2px solid #00000099;
+      font-weight: bold;
+      color: #00000099;
+      font-size: 24px;
+    }
+    .tab {
+      order: 99; // Put the tabs last
+      flex-grow: 1;
+      width: 100%;
+      display: none;
+      padding: 1rem;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"]:checked + label {
+      border-bottom: 2px solid #dfa33a;
+      color:#dfa33a;
+    }
+    input[type="radio"]:checked + label + .tab {
+      display: block;
+    }
+    .card{
+      //width: 100%;
+      img{
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+      }
+      h5{
+        a{
+          text-decoration: none;
+          color: #000000;
+        }
+      }
+    }
+  }
+  
+}
+
+//首頁熱門景點
+.home-popular-destination{
+  margin-bottom: 72px;
+  h3{
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .popular-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .popular-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    width: 350px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    .popular-item-title{
+      font-size: 16px;
+      margin-top: 8px;
+      text-align: center;
+    }
+    .popu-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span{
+        font-size: 12px;
+        color: #FFFFFF98;
+      }
+      p{
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+  .popular-bg-imageOne{
+    background: linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%,
+      url('https://images.unsplash.com/photo-1565031720661-8870d15928f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RnVyYW5vfGVufDB8fDB8fHww') no-repeat center center/cover;
+  }
+  .popular-bg-imageTwo{
+    background: linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%,
+      url('https://plus.unsplash.com/premium_photo-1688429242520-b88107a0e5eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fE1vbnRhbmF8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+  }
+  .popular-bg-imageThird{
+    background: linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%,
+      url('https://images.unsplash.com/photo-1605703296515-515167084932?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SHZhcnxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+  }
+  .popular-bg-imageForth{
+    background: linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%,
+      url('https://images.unsplash.com/photo-1615472910606-9d4f7291944f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXNzYW18ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+  }
+  .popular-bg-imagefifth{
+    background: linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%,
+      url('https://images.unsplash.com/photo-1597762504563-0f3b5623eab3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8R3JpbmRlbHdhbGR8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+  }
+  .popular-bg-imageSixth{
+    background: linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%,
+      url('https://images.unsplash.com/photo-1587139223877-04cb899fa3e8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2Fpcm5zfGVufDB8fDB8fHww') no-repeat center center/cover;
+  }
+}
+
+//首頁靈感推薦 Get Inspiration
+.home-get-inspiration{
+  margin-bottom: 72px;
+  .inspiration-title{
+    margin-bottom: 24px;
+  }
+  .inspiration-cards{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 30px;
+  }
+  .card{
+    border: none;
+    width: 410px;
+    flex-direction: column;
+    img{
+      max-width: 350px;
+      height: 263px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+    .card-body{
+      padding:0;
+    }
+    .card-title{
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .card-text{
+      color: #00000099;
+    }
+  }
+}
+
+//首頁訂閱區塊 Home Subscribe
+.home-subscribe{
+  padding: 92px 307px;
+  background: #eec885;
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h3{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  form{
+    height: 56px;
+    width: 540px;
+    input{
+      border-radius: 0;
+    }
+    .btn{
+      border-radius: 0 4px 4px 0;
+      border: none;
+      outline: none;
+      background-color: #dfa33a;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 17px 32px;
+    }
+  }
+}
+
+@media (max-width: 1280px){
+  .home-get-inspiration{
+    .inspiration-cards{
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 992px){
+    .banner-searchbox{
+        .container{
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                input{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .home-top-choices{
+      margin-top: 20%;
+      margin-bottom: 48px;
+    }
+    .home-popular-destination{
+      margin-bottom: 48px;
+      .popular-list{
+        width:100%;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .popular-item{
+        width: 47%;
+      }
+    }
+    .home-get-inspiration{
+      margin-bottom: 48px;
+      .inspiration-cards{
+        overflow-x: auto;
+        padding-bottom: 20px;
+      }
+    }
+    .home-subscribe{
+      padding: 92px 51px;
+    }
+
+}
+
+@media (max-width: 768px){
+  .home-carousel-banner{
+    .carousel-item{
+      img{
+        height: 315px;
+      }
+    }
+    .carousel-control-prev,
+    .carousel-control-next{
+      top: -35px;
+    }
+  }
+  .home-top-choices{
+    margin-top: 40%;
+    .tabs{
+      label{
+        width: 100px;
+        font-size: 20px;
+      }
+      .tab{
+        padding-left: 0;
+      }
+      .swiper-button-next,
+      .swiper-button-prev{
+        display: none;
+      }
+    }
+  }
+  .home-popular-destination{
+    margin-bottom: 51px;
+    .popular-item{
+      width: 100%;
+    }
+  }
+  .home-get-inspiration{
+    .container{
+      .inspiration-cards{
+        //padding-bottom: 20px;
+        width: 100%;
+        gap: 30px;
+        overflow-x: auto;
+        display: flex;
+      }
+      .inspiration-item{
+        .card{
+          width: 250px;
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .home-subscribe{
+    padding: 24px 16px;
+    h3{
+      font-size: 24px;
+    }
+    form{
+      max-width: 330px;
+    }
+  }
+}

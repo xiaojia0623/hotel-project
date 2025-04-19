@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./layout/head'); -%>
+    <title>訂房完成頁面</title>
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+    
+      <%- include('./layout/header'); -%>
+      
+
+      <div class="reservation-received">
+        <div class="container">
+          <ul class="list-group list-unstyled">
+            <li class="list-group-item">
+              <h2 class="fw-bold text-start mb-0">Reservation received!</h2>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-start align-items-md-center">
+                <p class="received-title">Guest</p>
+                <p class="received-content">David Lin</p>
+              </div>
+              <div class="d-flex justify-content-start align-items-md-center">
+                <p class="received-title">Email</p>
+                <div class="received-content d-md-flex justify-content-between align-items-md-center">
+                  <p class="me-16">david0520@mail.com.tw</p>
+                  <span >Confirmation email sent to this address</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-start align-items-md-center">
+                <p class="received-title text-capitalize mb-0">phone</p>
+                <p class="received-content mb-0">+886 9 32 456 789</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-start">
+                <p class="received-title text-capitalize mb-0">room</p>
+                <p class="received-content mb-0">Deluxe Suite with Pool / 2 nights</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-start">
+                <p class="received-title text-capitalize">check-in</p>
+                <p class="received-content">Wednesday, 17 June 2020</p>
+              </div>
+              <div class="d-flex justify-content-start">
+                <p class="received-title text-capitalize mb-0">check-out</p>
+                <p class="received-content mb-0">Friday, 19 June 2020</p>
+              </div>
+            </li>
+          </ul>
+          <div class="received-botton">
+            <a href="reservationDetails.html" class="btn btn-outline-primary text-uppercase">edit reservation</a>
+            <a href="index.html" class="btn btn-primary text-uppercase">Homepage</a>
+          </div>       
+        </div>
+      </div>
+
+
+      <%- include('./layout/nodropfooter'); -%>
+  </div>
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../main.js"></script>
+  </body>
+</html>

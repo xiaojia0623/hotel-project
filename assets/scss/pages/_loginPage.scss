@@ -1,0 +1,131 @@
+:root {
+    --primary: #dfa33a;
+  }
+
+.login{
+    .login-left{
+        background: url('https://images.unsplash.com/photo-1445991842772-097fea258e7b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsfGVufDB8fDB8fHww') 
+        center center/cover no-repeat;
+        color: #000;
+        position: relative;
+        text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+    }
+    .brand {
+            margin-top: 24px;
+            text-align: start;
+            margin-bottom: 128px;
+    }
+    h1{
+        font-size: 48px;
+        color: #121212;
+        font-family: "Raleway", serif;
+        font-weight: bold;
+        margin-bottom: 16px;
+        text-align: start;
+    }
+    p{
+        color: #00000099;
+        font-size: 14px;
+    }
+    .location-tag {
+        background: #000;
+        color: #fff;
+        padding: 9px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    .login-right {
+        background-color: #fff;
+        .form-control {
+            border-radius: 6px;
+        }
+    }
+    .btn-primary {
+        color: #ffffff;
+        background-color: var(--primary);
+        &:hover {
+            background-color: #e5bd78 ;
+        }
+    }
+    form{
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+.pad-login{
+    display: none;
+}
+
+#loadingOverlay {
+    display: flex;  /* 使用 Flexbox 布局 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+}
+  
+#loadingOverlay p {
+    font-size: 1.2rem;  /* 可調整字體大小 */
+    margin-top: 15px;  /* 字與 spinner 的間距 */
+}
+
+.form-signup {
+    max-width: 400px;
+    margin: 80px auto;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    .container{
+        flex: 1;
+    }
+}
+
+@media (max-width:992px) {
+    .login{
+        display: none;
+    }
+    .pad-login{
+        padding: 24px 39px;
+        display: block;
+        background: url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8amFwYW58ZW58MHx8MHx8fDA%3D') 
+        center center/cover no-repeat;
+        object-fit: cover;
+        h1{
+            margin-bottom: 48px;
+        }
+        form{
+            max-width: 330px;
+            display: flex;
+            flex-direction: column;
+            margin:  0 auto;
+            h2{
+                margin-bottom: 16px;
+            }
+            label{
+                color: #00000099;
+            }
+            p{
+                font-size: 12px;
+                color: #00000099;
+            }
+            .signupbtn{
+                a{
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .pad-login{
+        padding: 16px 15px;   
+        background: none;
+    }
+    
+
+}

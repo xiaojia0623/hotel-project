@@ -1,0 +1,173 @@
+
+
+.searchzone{
+    background-color: #eec885;
+    padding: 24px 85px;
+    form{
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #summary{
+        margin: 0;
+
+    }
+    .searchcountry,
+    .searchDate,
+    .searchDateBegin,
+    .searchDateEnd,
+    .searchGuest,
+    .searchbtn,
+    .searchSelect{
+        width: 100%;
+    }
+    .searchGuest{
+        gap: 0;
+        width: 100%;
+    }
+    .icon{
+        font-size: 24px;
+        padding: 16px;
+    }
+    input{
+        width: 100%;
+        outline: none;
+        border: none;
+    }
+    .searchbtn{
+        margin: 0;
+        .btn{
+            height:  56px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .form-select{
+        border: none;
+        cursor: pointer;
+        option{
+            cursor: pointer;
+        }
+    }
+    .hotelFilterMobile{
+        display: none;
+        ul{
+          justify-content: center;
+          width:100%;
+          li{
+            padding: 10px;
+            border-right: 2px solid white;
+          }
+        }
+    }
+    .hotelDetailMobile{
+        display: none;
+        padding:10px;
+    }
+}
+
+@media (max-width: 1700px){
+    .searchzone{
+      .hotelWebSearch{
+        display: block;
+      }
+      .hotelDetailMobile{
+        display: none;
+      }
+      .hotelFilterMobile{
+        display:none;
+      }
+    }
+}
+
+@media (max-width: 992px){
+    .searchzone{
+        padding: 16px 39px;
+        form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .hotelWebSearch{
+            display: block;
+            .searchcountry,
+            .searchDate,
+            .searchDateBegin,
+            .searchDateEnd,
+            .searchGuest,
+            .searchSelect,
+            .searchbtn{
+                width: 100%;
+            }
+            .searchDate{
+                gap: 5px;
+            }
+        }
+        .hotelDetailMobile{
+            display: none;
+        }
+        .hotelFilterMobile{
+            display:none;
+            ul{
+                justify-content: center;
+                width:100%;
+                li{
+                  padding: 10px;
+                  border-right: 2px solid white;
+                }
+            }
+        }
+        .form-select{
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 768px){
+    .searchzone{
+        .back-arrow {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .hotelWebSearch{
+            display: none;
+        }
+        .hotelDetailMobile{
+            display:  none;
+        }
+        .hotelFilterMobile{
+            display:  block;
+            ul{
+                margin: 0;
+                li{
+                    border:none;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 520px){
+    .searchzone{
+        padding: 12px 0;
+      .hotelWebSearch{
+        display: none;
+      }
+      .hotelDetailMobile{
+        display: block;
+        padding: 0;
+      }
+      .hotelFilterMobile{
+        display:  none;
+        
+      }
+    }
+}
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./layout/head'); -%>
+    <title>訂房資訊</title>
+  </head>
+  <body>
+    
+
+    <%- include('./layout/header'); -%>
+    <div class="reservation-details">      
+      <div class="container">
+        <div class="reservation-form">
+          <h2 class="fw-bold">Reservation details</h2>
+
+          <form class="row g-3  needs-validation" id="reservationForm"  novalidate>
+            <div class="col-12 mb-3">
+              <label for="usersname" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="usersname" required>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">請填寫完整姓名</div>
+            </div>
+            <div class="col-12 mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control"  name="email" id="email" required>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">請填寫Email</div>
+            </div>
+            <div class="col-12 mb-3">
+              <label for="usersphone" class="form-label">Phone (optional)</label>
+              <input type="tel" class="form-control" name="phone" id="usersphone" required>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">請填寫手機號碼</div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <button class="btn btn-primary w-100" type="submit">Reserve</button>
+            </div>
+            <p class="text-center text-primary">Reserve now, pay at stay</p>
+          </form>
+        </div>
+        <div class="booking-details">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3>Booking details</h3>
+              <p>17 June 2020 - 19 June 2020・2 nights</p>
+              <p>2 adults・1 room</p>
+              <p>Rachada Hotel</p>
+            </li>
+            <li class="list-group-item">
+              <h3>Price summary</h3>
+              <div class="detail-item">
+                <p>Deluxe Suite with Pool</p>
+                <p>TWD 3,960</p>
+              </div>
+              <div class="detail-item">
+                <p>VAT (7%)</p>
+                <p>TWD 277</p>
+              </div>
+              <div class="detail-item">
+                <p>Property service charge</p>
+                <p>TWD 396</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="detail-item">
+                <p>Total</p>
+                <p class="total-price">TWD 4,633</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reservation-mobile">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed d-flex m-0 align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <p class="d-flex accord-title">Total <span>TWD 4,633</span> </p>
+                  <p class="ms-auto p-0 text-primary fw-bold text-uppercase me-4 m-0">Detail</p>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <h3>Booking details</h3>
+                      <p>17 June 2020 - 19 June 2020・2 nights</p>
+                      <p>2 adults・1 room</p>
+                      <p>Rachada Hotel</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3>Price summary</h3>
+                      <div class="detail-item">
+                        <p>Deluxe Suite with Pool</p>
+                        <p>TWD 3,960</p>
+                      </div>
+                      <div class="detail-item">
+                        <p>VAT (7%)</p>
+                        <p>TWD 277</p>
+                      </div>
+                      <div class="detail-item">
+                        <p>Property service charge</p>
+                        <p>TWD 396</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="detail-item">
+                        <p>Total</p>
+                        <p class="total-price">TWD 4,633</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <%- include('./layout/nodropfooter'); -%>
+
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/detailsForm.js"></script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
