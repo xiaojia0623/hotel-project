@@ -41,10 +41,6 @@
 
 ---
 
-├── assets/ │ ├── images/ # 圖片資源 │ ├── scss/ # SCSS 樣式檔 │ └── dist/ # 編譯後靜態資源（可忽略） │ ├── js/ # 功能性 JavaScript 模組 │ ├── loginButton.js │ ├── slider.js │ └── ... │ ├── layout/ # 共用的 EJS 模板區塊 │ ├── header.ejs │ ├── footer.ejs │ └── ... │ ├── pages/ # 各個 HTML 頁面 │ ├── index.html │ ├── aboutUs.html │ └── ... │ ├── main.js # 專案主進入點（載入樣式與 JS 功能） ├── vite.config.js # Vite 設定檔 ├── package.json # 專案設定與依賴
-
----
-
 ## 開發模式的監聽
 vite 專案執行開發模式 `npm run dev` 後即會自動監聽，不需要使用 `Live Sass Compiler` 的 `Watch SCSS` 功能
 
