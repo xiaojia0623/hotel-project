@@ -17,6 +17,7 @@ import './js/topButtonJquery';
 import './js/searchzoneInput';
 import './js/slider';
 import './js/loginButton';
+import './js/detailsForm';
 
 // 初始化 AOS
 AOS.init();
