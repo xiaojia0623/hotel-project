@@ -2,8 +2,8 @@
 import './assets/scss/all.scss';
 
 // 匯入 Bootstrap 的 JS
-import 'bootstrap/dist/js/bootstrap.min.js';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+//import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 
 // 匯入專案的 JS 檔案
