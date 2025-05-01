@@ -1,5 +1,3 @@
-
-
 const sortBtn = document.querySelector('.sortBtn'); // sort 按鈕
 const sortOptions = document.getElementById('sortOptions');
 const hotelList = document.querySelector('.search-hotel-list .hotel-list');
@@ -31,7 +29,7 @@ sortOptions.addEventListener('click', (e) => {
     hotelList.innerHTML = '';
     cards.forEach(card => hotelList.appendChild(card));
 
-    // ✅ 排序完成後自動收回選單
+    //排序完成後自動收回選單
     sortOptions.classList.add('d-none');
 });
 

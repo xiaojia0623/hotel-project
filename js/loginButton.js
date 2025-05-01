@@ -1,6 +1,5 @@
 import * as bootstrap from 'bootstrap'
 
-
 document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -41,21 +40,19 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     return;
   }
 
-  // ✅ 顯示 loading 遮罩
   document.getElementById('loadingOverlay').classList.remove('d-none');
 
-  // 模擬處理，1 秒後顯示成功提示
   setTimeout(() => {
     document.getElementById('loadingOverlay').classList.add('d-none');
     showSuccessToast('登入成功！歡迎回來 👋');
 
     setTimeout(() => {
       window.location.href = 'myBookingPage.html';
-    }, 1500); // 1.5 秒後跳轉
-  }, 1000); // 模擬伺服器處理
+    }, 1500);
+  }, 1000);
 });
 
-// ✅ Toast 顯示函式
+
 function showToast(message) {
   const toastEl = document.getElementById('errorToast');
   toastEl.querySelector('.toast-body').textContent = message;
