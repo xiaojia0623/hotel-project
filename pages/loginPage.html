@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <%- include('./layout/head'); -%>
     <title>住宿網站登入頁</title>
@@ -11,7 +11,7 @@
                 <!-- Left Side -->
                 <div class="col-md-7 d-none d-md-flex flex-column justify-content-center align-items-center text-light login-left">
                     <div class="text-center px-5">
-                        <h2 class="brand"><a href="index.html" class="text-uppercase fw-bold text-primary text-decoration-none">悠宿 EasyStay</a></h2>
+                        <h2 class="brand"><a href="index.html" class="fw-bold text-primary text-decoration-none">悠宿 EasyStay</a></h2>
                         <h1>An ideal hotel makes a<br/>wonderful Trip.</h1>
                         <p class="text-start">Discover your dream destination and hotel on ALOHA.com</p>
                     </div>
@@ -24,15 +24,15 @@
                 <div class="col-md-4 d-flex align-items-center justify-content-center login-right">
                     <div class="w-75">
                         <h3 class="fw-bold mb-4">Login</h3>
-                        <form id="loginForm"  class="needs-validation" novalidate>
+                        <form id="loginForm" class="needs-validation" novalidate>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required />
+                                <input type="email" class="form-control" id="email" autocomplete="email" required />
                                 <div class="invalid-feedback">請輸入 Email</div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" minlength="8" maxlength="12" required />
+                                <input type="password" class="form-control" id="password" autocomplete="new-password" minlength="8" maxlength="12" required />
                                 <div class="invalid-feedback">請輸入密碼</div>
                             </div>
                             <div class="mb-3 form-check">
@@ -56,18 +56,18 @@
 
     <div class="pad-login vh-100">
         <div class="container">
-            <h1><a href="index.html" class="text-uppercase fw-bold text-primary text-decoration-none">aloha</a></h1>
-            <form class="row g-3 needs-validation" novalidate>
+            <h1><a href="index.html" class="fw-bold text-primary text-decoration-none">悠宿 EasyStay</a></h1>
+            <form id="loginFormMobile" class="row g-3 needs-validation" novalidate>
                 <h2 class="fw-bold">Login</h2>
                 <div class="col-12 mb-3">
-                    <label for="user-email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="user-email" required>
+                    <label for="email-mobile" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email-mobile" autocomplete="email-mobile" required>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">請填寫完整Email</div>
                 </div>
                 <div class="col-12">
-                    <label for="password-confirm" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password-confirm" required>
+                    <label for="password-mobile" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password-mobile" autocomplete="password-mobile" required>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">請填寫password</div>
                 </div>
@@ -103,7 +103,7 @@
         </div>
     </div>
 
-    <!-- ✅ Toast 區塊 -->
+    <!-- Toast 區塊 -->
     <div class="position-fixed top-0 end-0 p-3" style="z-index: 1055">
         <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
@@ -137,7 +137,9 @@
     </div>
 
     
-    <script src="../js/loginButton.js"></script>
+    
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../js/loginButton.js"></script>
+    <script type="module" src="../js/showToast.js"></script>
   </body>
 </html>

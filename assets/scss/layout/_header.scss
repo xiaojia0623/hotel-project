@@ -1,23 +1,21 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
-}
-
-.navbar-nav{
-  .nav-item{
-    a{
-
-      &::after{
-        content: '';
-        display: block;
-        width: 0%;
-        height: 4px;
-        background-color: #dfa33a ;
-        transition:  .4s .2s;
-      }
-      &:hover{
-        &::after{
-          width: 100%;
+.navbar{
+  .container{
+    .navbar-nav{
+      .nav-item{
+        a{
+          &::after{
+            content: '';
+            display: block;
+            width: 0%;
+            height: 4px;
+            background-color: #dfa33a ;
+            transition:  .4s .2s;
+          }
+          &:hover{
+            &::after{
+              width: 100%;
+            }
+          }
         }
       }
     }
