@@ -310,7 +310,7 @@ $primary :#dfa33a;
 @media (max-width:992px){
     .search-hotel-filter{
         .container{
-            gap: 0;
+            //gap: 0;
             .asideTopFilterBtn{
                 display: none;
             }
@@ -331,6 +331,10 @@ $primary :#dfa33a;
                             width: 100%;
                         }
                         
+                    }
+                    .rangenum{
+                        padding: 10px 4px;
+                        min-width: auto;
                     }
                     .middleline{
                         display: none;
