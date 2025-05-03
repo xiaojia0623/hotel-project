@@ -1,7 +1,28 @@
 # 🏨 Hotel Booking Website
 
-這是一個旅宿訂房網站前端專案，提供使用者搜尋飯店、查看詳情、註冊與登入會員、完成訂單等操作。
-整體 UI 使用 Bootstrap 設計，並搭配 Vite 構建工具實現模組化開發與高效編譯。
+## 專案畫面預覽
+
+### 首頁畫面
+![網頁版首頁預覽](assets/images/web-home-page.png)
+![手機版首頁預覽](assets/images/web-home-page.png)
+
+### 飯店列表
+![網頁版訂房飯店列表](assets/images/web-hotel-list.png)
+![手機版訂房飯店列表](assets/images/web-home-page.png)
+
+### 飯店詳細頁面
+![網頁版訂房飯店詳細頁面](assets/images/web-hotel-detail.png)
+![手機版訂房飯店詳細頁面](assets/images/web-hotel-detail.png)
+
+## 悠宿 EasyStay — 練習訂房平台切版專案
+這是一個向知名住宿網站致敬的切版練習作品，模擬訂房平台的基本功能。使用者可瀏覽飯店資訊，也可註冊與登入帳號，體驗完整的使用流程。
+
+我在此專案中負責整體前端切版與響應式設計，包含手機與桌面版的 UI 調整，並實作部分互動功能，如：
+- 響應式漢堡選單切換
+- 語言選擇下拉選單
+- 滑桿顯示價格範圍
+- 基本註冊與登入邏輯切換
+- 手機版的飯店列表可以以價格做飯店排列順序
 
 ✅ 支援 **響應式網頁設計（RWD）**，可在桌機、平板、手機等裝置上自適應顯示。
 
