@@ -26,7 +26,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 />
 <!-- Bootstrap  -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Bootstrap icons -->
 <link
   rel="stylesheet"
@@ -42,34 +42,65 @@
   href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
 />
     <title>訂房完成頁面</title>
-    <script type="module" crossorigin src="/hotel-project/assets/main-4ba468df.js"></script>
-    <link rel="stylesheet" href="/hotel-project/assets/main-5c6bb2f3.css">
+    <script type="module" crossorigin src="/hotel-project/assets/main-91c510bf.js"></script>
+    <link rel="stylesheet" href="/hotel-project/assets/main-a40bfd9b.css">
   </head>
   <body>
 
     <div class="wrapper">
 
     
-      <nav class="navbar navbar-expand-lg bg-white sticky-top shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <h1><a class="navbar-brand text-primary fw-bold" href="index.html">悠宿 EasyStay</a></h1>
-        <a class="nav-link header-text roboto ms-5 fw-bold d-block d-md-none d-lg-none" aria-current="page" href="loginPage.html">Login</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="filterSearchPage.html">Product</a>
+      <nav class="navbar sticky-top shadow bg-white">
+    <!-- 網頁版顯示 -->
+    <div class="container">
+        <h1><a href="index.html" class="navbar-brand text-primary fw-bold">悠宿 EasyStay</a></h1>
+        <ul class="navbar-nav topMenu d-lg-flex d-none d-lg-block flex-row justify-content-lg-center">
+            <li class="nav-item page">
+                <a class="nav-link" href="index.html" >Home</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="filterSearchPage.html">Product</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="aboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="signUpPage.html">Sign up</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="loginPage.html">Login</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--手機版顯示 menu展開按鈕 -->
+    <button class="navbar-toggler border-0 d-md-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- 手機版顯示 -->
+    <div class="offcanvas offcanvas-top " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="height: 35%">
+        <div class="offcanvas-header bg-white">
+            <h5 class="offcanvas-titl text-primary" id="offcanvasNavbarLabel">悠宿 EasyStay</a></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-white">
+            <ul class="navbar-nav menu text-center">
+                <li class="nav-item page">
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="aboutUs.html">About Us</a>
+                <li class="nav-item page">
+                    <a class="nav-link" href="filterSearchPage.html">Product</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="signUpPage.html">Sign up</a>
+                <li class="nav-item page">
+                    <a class="nav-link" href="aboutUs.html">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold d-md-block d-none" aria-current="page" href="loginPage.html">Login</a>
+                <li class="nav-item page">
+                    <a class="nav-link" href="signUpPage.html">Sign up</a>
+                </li>
+                <li class="nav-item page">
+                    <a class="nav-link" href="loginPage.html">Login</a>
                 </li>
             </ul>
         </div>

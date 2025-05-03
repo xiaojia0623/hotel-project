@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,7 +26,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 />
 <!-- Bootstrap  -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Bootstrap icons -->
 <link
   rel="stylesheet"
@@ -42,8 +42,9 @@
   href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
 />
     <title>住宿網站登入頁</title>
-    <script type="module" crossorigin src="/hotel-project/assets/main-4ba468df.js"></script>
-    <link rel="stylesheet" href="/hotel-project/assets/main-5c6bb2f3.css">
+    <script type="module" crossorigin src="/hotel-project/assets/loginPage-18549ac0.js"></script>
+    <link rel="modulepreload" crossorigin href="/hotel-project/assets/main-91c510bf.js">
+    <link rel="stylesheet" href="/hotel-project/assets/main-a40bfd9b.css">
   </head>
   <body>
     <div class="login">
@@ -52,7 +53,7 @@
                 <!-- Left Side -->
                 <div class="col-md-7 d-none d-md-flex flex-column justify-content-center align-items-center text-light login-left">
                     <div class="text-center px-5">
-                        <h2 class="brand"><a href="index.html" class="text-uppercase fw-bold text-primary text-decoration-none">悠宿 EasyStay</a></h2>
+                        <h2 class="brand"><a href="index.html" class="fw-bold text-primary text-decoration-none">悠宿 EasyStay</a></h2>
                         <h1>An ideal hotel makes a<br/>wonderful Trip.</h1>
                         <p class="text-start">Discover your dream destination and hotel on ALOHA.com</p>
                     </div>
@@ -65,15 +66,15 @@
                 <div class="col-md-4 d-flex align-items-center justify-content-center login-right">
                     <div class="w-75">
                         <h3 class="fw-bold mb-4">Login</h3>
-                        <form id="loginForm"  class="needs-validation" novalidate>
+                        <form id="loginForm" class="needs-validation" novalidate>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required />
+                                <input type="email" class="form-control" id="email" autocomplete="email" required />
                                 <div class="invalid-feedback">請輸入 Email</div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" minlength="8" maxlength="12" required />
+                                <input type="password" class="form-control" id="password" autocomplete="new-password" minlength="8" maxlength="12" required />
                                 <div class="invalid-feedback">請輸入密碼</div>
                             </div>
                             <div class="mb-3 form-check">
@@ -97,18 +98,18 @@
 
     <div class="pad-login vh-100">
         <div class="container">
-            <h1><a href="index.html" class="text-uppercase fw-bold text-primary text-decoration-none">aloha</a></h1>
-            <form class="row g-3 needs-validation" novalidate>
+            <h1><a href="index.html" class="fw-bold text-primary text-decoration-none">悠宿 EasyStay</a></h1>
+            <form id="loginFormMobile" class="row g-3 needs-validation" novalidate>
                 <h2 class="fw-bold">Login</h2>
                 <div class="col-12 mb-3">
-                    <label for="user-email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="user-email" required>
+                    <label for="email-mobile" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email-mobile" autocomplete="email-mobile" required>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">請填寫完整Email</div>
                 </div>
                 <div class="col-12">
-                    <label for="password-confirm" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password-confirm" required>
+                    <label for="password-mobile" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password-mobile" autocomplete="password-mobile" required>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">請填寫password</div>
                 </div>
@@ -144,7 +145,7 @@
         </div>
     </div>
 
-    <!-- ✅ Toast 區塊 -->
+    <!-- Toast 區塊 -->
     <div class="position-fixed top-0 end-0 p-3" style="z-index: 1055">
         <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
@@ -178,7 +179,9 @@
     </div>
 
     
-    <script src="../js/loginButton.js"></script>
+    
+    
+    
     
   </body>
 </html>

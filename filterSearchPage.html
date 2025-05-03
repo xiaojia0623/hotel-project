@@ -26,7 +26,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 />
 <!-- Bootstrap  -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Bootstrap icons -->
 <link
   rel="stylesheet"
@@ -42,30 +42,62 @@
   href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
 />
     <title>飯店篩選頁面</title>
-    <script type="module" crossorigin src="/hotel-project/assets/main-4ba468df.js"></script>
-    <link rel="stylesheet" href="/hotel-project/assets/main-5c6bb2f3.css">
+    <script type="module" crossorigin src="/hotel-project/assets/filterSearchPage-21da9256.js"></script>
+    <link rel="modulepreload" crossorigin href="/hotel-project/assets/main-91c510bf.js">
+    <link rel="stylesheet" href="/hotel-project/assets/main-a40bfd9b.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <h1><a class="navbar-brand text-primary fw-bold" href="index.html">悠宿 EasyStay</a></h1>
-        <a class="nav-link header-text roboto ms-5 fw-bold d-block d-md-none d-lg-none" aria-current="page" href="loginPage.html">Login</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="filterSearchPage.html">Product</a>
+    <nav class="navbar sticky-top shadow bg-white">
+    <!-- 網頁版顯示 -->
+    <div class="container">
+        <h1><a href="index.html" class="navbar-brand text-primary fw-bold">悠宿 EasyStay</a></h1>
+        <ul class="navbar-nav topMenu d-lg-flex d-none d-lg-block flex-row justify-content-lg-center">
+            <li class="nav-item page">
+                <a class="nav-link" href="index.html" >Home</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="filterSearchPage.html">Product</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="aboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="signUpPage.html">Sign up</a>
+            </li>
+            <li class="nav-item page">
+                <a class="nav-link ms-5" href="loginPage.html">Login</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--手機版顯示 menu展開按鈕 -->
+    <button class="navbar-toggler border-0 d-md-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- 手機版顯示 -->
+    <div class="offcanvas offcanvas-top " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="height: 35%">
+        <div class="offcanvas-header bg-white">
+            <h5 class="offcanvas-titl text-primary" id="offcanvasNavbarLabel">悠宿 EasyStay</a></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-white">
+            <ul class="navbar-nav menu text-center">
+                <li class="nav-item page">
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="aboutUs.html">About Us</a>
+                <li class="nav-item page">
+                    <a class="nav-link" href="filterSearchPage.html">Product</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold" aria-current="page" href="signUpPage.html">Sign up</a>
+                <li class="nav-item page">
+                    <a class="nav-link" href="aboutUs.html">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link header-text roboto ms-5 fw-bold d-md-block d-none" aria-current="page" href="loginPage.html">Login</a>
+                <li class="nav-item page">
+                    <a class="nav-link" href="signUpPage.html">Sign up</a>
+                </li>
+                <li class="nav-item page">
+                    <a class="nav-link" href="loginPage.html">Login</a>
                 </li>
             </ul>
         </div>
@@ -101,20 +133,20 @@
         <div class="searchGuest d-flex align-items-center bg-white">
             <i class="fa-solid fa-user icon"></i>
             <div class="form-floating searchSelect d-flex align-items-center">
-              <select class="form-select" id="adultsSelect" aria-label="Adults">
+              <select class="form-select" id="adults-select" aria-label="Adults">
                   <option value="1">1 adult</option>
                   <option value="2" selected>2 adults</option>
                   <option value="3">3 adults</option>
                   <option value="4">4 adults</option>
               </select>
 
-              <select class="form-select" id="roomsSelect" aria-label="Rooms">
+              <select class="form-select" id="rooms-select" aria-label="Rooms">
                   <option value="1" selected>1 room</option>
                   <option value="2">2 rooms</option>
                   <option value="3">3 rooms</option>
                   <option value="4">4 rooms</option>
               </select>
-              <label for="adultsSelect" class="fw-bold text-dark">Guests</label>
+              <label for="adults-select" class="fw-bold text-dark">Guests</label>
             </div>
         </div>
         <div class="searchbtn">
@@ -193,20 +225,20 @@
                       <div class="deals">
                         <p class="dealscontent">Deals</p>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
-                          <label class="form-check-label" for="flexCheckDefault">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckMobile" checked>
+                          <label class="form-check-label" for="flexCheckMobile">
                             Free cancellation
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                          <label class="form-check-label" for="flexCheckChecked">
+                          <input class="form-check-input" type="checkbox" value="" id="mobileCheckChecked">
+                          <label class="form-check-label" for="mobileCheckChecked">
                             No prepayment
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="SpecialCheckChecked">
-                          <label class="form-check-label" for="SpecialCheckChecked">
+                          <input class="form-check-input" type="checkbox" value="" id="SpecialCheckMobile">
+                          <label class="form-check-label" for="SpecialCheckMobile">
                             Special offers
                           </label>
                         </div>
@@ -215,20 +247,20 @@
                       <div class="popufilter">
                         <p class="dealscontent">Popular filter</p>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="BreakfastCheck" checked>
-                          <label class="form-check-label" for="BreakfastCheck">
+                          <input class="form-check-input" type="checkbox" value="" id="BreakfastCheckMobile" checked>
+                          <label class="form-check-label" for="BreakfastCheckMobile">
                             Breakfast included
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexFreeCheck">
-                          <label class="form-check-label" for="flexFreeCheck">
+                          <input class="form-check-input" type="checkbox" value="" id="mobileFreeCheck">
+                          <label class="form-check-label" for="mobileFreeCheck">
                             Free Wi-Fi
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="SwimCheckChecked">
-                          <label class="form-check-label" for="SwimCheckChecked">
+                          <input class="form-check-input" type="checkbox" value="" id="SwimCheckMobile">
+                          <label class="form-check-label" for="SwimCheckMobile">
                             Swimming pool
                           </label>
                         </div>
@@ -239,28 +271,33 @@
                         <div id="sliderModal" class="sliderModal"></div>
                         <div class="price-inputs">
                           <div class='rangenum flex-column w-100'>
-                            <label for="minPriceModal" class="f12 fw-bold open-sans">MIN PRICE</label>
-                            <div class="f12 graylight open-sans d-flex">
-                              <span>TWD</span>
-                              <input type="number" class="border-0" id="minPriceModal" min="800" max="4000" step="100" name="minPrice" />
-                            </div>
+                            <label class="f12 fw-bold open-sans" for="minPriceModalMobile">
+                              MIN PRICE
+                              <div class="f12 graylight open-sans d-flex">
+                                <span>TWD</span>
+                                <input type="number" class="border-0" id="minPriceModalMobile" min="800" max="4000" step="100" name="minPrice" />
+                              </div>
+                            </label>
                           </div>
                           <div class="middleline"> - </div>
                           <div class='rangenum flex-column w-100'>
-                            <label for="maxPriceModal" class="f12 fw-bold open-sans">MAX PRICE</label>
-                            <div class="f12 graylight open-sans d-flex">
-                              <span>TWD</span>
-                              <input type="number" class="border-0" id="maxPriceModal" min="800" max="4000" step="100" name="maxPrice" />
-                            </div>
+                            <label class="f12 fw-bold open-sans"  for="maxPriceModalMobile">
+                              MAX PRICE
+                              <div class="f12 graylight open-sans d-flex">
+                                <span>TWD</span>
+                                <input type="number" class="border-0" id="maxPriceModalMobile" min="800" max="4000" step="100" name="minPrice" />
+                              </div>
+                            </label>
                           </div>
                         </div>
                       </div>
+
             
                       <div class="rating">
                         <p class="ratingcontent">Rating</p>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="ratCheckDefault" checked>
-                          <label class="form-check-label" for="ratCheckDefault">
+                          <input class="form-check-input" type="checkbox" value="" id="ratCheckMobile" checked>
+                          <label class="form-check-label" for="ratCheckMobile">
                             <i class="fa-solid fa-star icon"></i>
                             <i class="fa-solid fa-star icon"></i>
                             <i class="fa-solid fa-star icon"></i>
@@ -270,8 +307,8 @@
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="ratCheckDefault2">
-                          <label class="form-check-label" for="ratCheckDefault2">
+                          <input class="form-check-input" type="checkbox" value="" id="ratCheckMobile2">
+                          <label class="form-check-label" for="ratCheckMobile2">
                             <i class="fa-solid fa-star icon"></i>
                             <i class="fa-solid fa-star icon"></i>
                             <i class="fa-solid fa-star icon"></i>
@@ -280,8 +317,8 @@
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="ratCheckDefault3">
-                          <label class="form-check-label" for="ratCheckDefault3">
+                          <input class="form-check-input" type="checkbox" value="" id="ratCheckMobile3">
+                          <label class="form-check-label" for="ratCheckMobile3">
                             <i class="fa-solid fa-star icon"></i>
                             <i class="fa-solid fa-star icon"></i>
                             <i class="fa-solid fa-star icon"></i>
@@ -289,23 +326,23 @@
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="ratCheckDefault4">
-                          <label class="form-check-label" for="ratCheckDefault4">
+                          <input class="form-check-input" type="checkbox" value="" id="ratCheckMobile4">
+                          <label class="form-check-label" for="ratCheckMobile4">
                             <i class="fa-solid fa-star icon"></i>
                             <i class="fa-solid fa-star icon"></i>
                             <p>2.0</p>
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="ratCheckDefault5">
-                          <label class="form-check-label" for="ratCheckDefault5">
+                          <input class="form-check-input" type="checkbox" value="" id="ratCheckMobile5">
+                          <label class="form-check-label" for="ratCheckMobile5">
                             <i class="fa-solid fa-star icon"></i>
                             <p>1.0</p>
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault0">
-                          <label class="form-check-label" for="flexCheckDefault0">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckMobile0">
+                          <label class="form-check-label" for="flexCheckMobile0">
                             Unrated
                           </label>
                         </div>
@@ -314,26 +351,26 @@
                       <div class="staytype">
                         <p class="typecontent">Stay type</p>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="typeCheckDefault1" checked>
-                          <label class="form-check-label" for="typeCheckDefault1">
+                          <input class="form-check-input" type="checkbox" value="" id="typeCheckMobile1" checked>
+                          <label class="form-check-label" for="typeCheckMobile1">
                             Hotel
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="typeCheckChecked2">
-                          <label class="form-check-label" for="typeCheckChecked2">
+                          <input class="form-check-input" type="checkbox" value="" id="typeCheckMobile2">
+                          <label class="form-check-label" for="typeCheckMobile2">
                             Apartment
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="typeCheckChecked3">
-                          <label class="form-check-label" for="typeCheckChecked3">
+                          <input class="form-check-input" type="checkbox" value="" id="typeCheckMobile3">
+                          <label class="form-check-label" for="typeCheckMobile3">
                             Unique
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="typeCheckChecked4">
-                          <label class="form-check-label" for="typeCheckChecked4">
+                          <input class="form-check-input" type="checkbox" value="" id="typeCheckMobile4">
+                          <label class="form-check-label" for="typeCheckMobile4">
                             Hostel
                           </label>
                         </div>
@@ -404,13 +441,37 @@
             
               <div class="price-inputs">
                 <div class="rangenum">
-                  <label>MIN PRICE</label>
-                  <div class="price-value" id="minPriceDisplay">TWD 800</div>
+                  <label for="minPriceDisplay" class="f12 fw-bold open-sans">MIN PRICE</label>
+                  <div class="price-value d-flex align-items-center">
+                    <span>TWD</span>
+                    <input
+                      type="number"
+                      id="minPriceDisplay"
+                      name="minPrice"
+                      class="border-0 ms-1"
+                      min="800"
+                      max="4000"
+                      step="100"
+                      value="800"
+                    />
+                  </div>
                 </div>
                 <div class="middleline">-</div>
                 <div class="rangenum">
-                  <label>MAX PRICE</label>
-                  <div class="price-value" id="maxPriceDisplay">TWD 4,000+</div>
+                  <label for="maxPriceInput" class="f12 fw-bold open-sans">MAX PRICE</label>
+                  <div class="price-value d-flex align-items-center">
+                    <span>TWD</span>
+                    <input
+                      type="number"
+                      id="maxPriceInput"
+                      name="maxPrice"
+                      class="border-0 ms-1"
+                      min="800"
+                      max="4000"
+                      step="100"
+                      value="4000"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -941,8 +1002,10 @@
     <a href="#" class="goTopBtn jq-goTop">
       <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
     </a>
-</div>    <script src="../js/searchzoneInput.js"></script>
-    <script src="../js/sortHotelPrice.js"></script>
+</div>    
+    
+    
+    
     
   </body>
 </html>

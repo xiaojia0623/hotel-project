@@ -26,7 +26,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 />
 <!-- Bootstrap  -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Bootstrap icons -->
 <link
   rel="stylesheet"
@@ -42,51 +42,49 @@
   href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
 />
     <title>我的預訂資訊</title>
-    <script type="module" crossorigin src="/hotel-project/assets/main-4ba468df.js"></script>
-    <link rel="stylesheet" href="/hotel-project/assets/main-5c6bb2f3.css">
+    <script type="module" crossorigin src="/hotel-project/assets/myBookingPage-fad9e0c9.js"></script>
+    <link rel="modulepreload" crossorigin href="/hotel-project/assets/main-91c510bf.js">
+    <link rel="stylesheet" href="/hotel-project/assets/main-a40bfd9b.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="booking-header navbar navbar-expand-lg bg-white sticky-top shadow">
+    <div class="container-fluid">
+        <!-- 去除 data-bs-toggle、data-bs-target 等 Bootstrap 用的屬性 -->
+        <button class="navbar-toggler" type="button" aria-controls="navbarTogglerBooking" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <h1><a class="navbar-brand" href="index.html"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/f46426a83dbd5d3fb3e908b5ff4b06f636a8664f/week8-booking/logo-aloha.svg" alt="logo"/></a></h1>
-        <a class="nav-link header-text roboto ms-5 fw-bold d-block d-md-none d-lg-none" aria-current="page" href="loginPage.html">Login</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <!-- Dropdown 預設顯示圖標和語言 -->
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-globe me-2"></i> <!-- 預設顯示地球圖標 -->
-                        <span id="selectedLanguage">選擇語言</span> <!-- 預設顯示語言名稱 -->
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <!-- 各國語言選項 -->
+    
+        <a class="navbar-brand text-primary fw-bold" href="index.html">悠宿 EasyStay</a>
+    
+        <!-- 移除 collapse、navbar-collapse 類別，避免 Bootstrap 干擾 -->
+        <div id="navbarTogglerBooking" class="nav-collapse">
+            <ul class="navbar-nav d-flex align-items-center flex-row">
+                <li class="nav-item dropdown">
+                    <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="languageDropdown">
+                        <i class="bi bi-globe me-2"></i> 
+                        <span id="selectedLanguage">選擇語言</span>
+                    </button>
+                    <ul class="dropdown-menu z-3" aria-labelledby="languageDropdown">
                         <li><a class="dropdown-item" href="#" data-country="US" data-lang="English" data-icon="bi bi-flag-us">English</a></li>
                         <li><a class="dropdown-item" href="#" data-country="CN" data-lang="中文" data-icon="bi bi-flag-cn">中文</a></li>
                         <li><a class="dropdown-item" href="#" data-country="JP" data-lang="日本語" data-icon="bi bi-flag-jp">日本語</a></li>
                         <li><a class="dropdown-item" href="#" data-country="FR" data-lang="Français" data-icon="bi bi-flag-fr">Français</a></li>
-                        </ul>
-                    </div>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img style="width: 24px; height: 24px; object-fit: cover;" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww" alt="avatar" class="rounded-circle me-2" id="userAvatar">
-                          <span id="userName">David Lin</span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                          <!-- <li><a class="dropdown-item" href="#">會員資料</a></li> -->
-                          <li><a class="dropdown-item" href="index.html" id="logoutBtn">登出</a></li>
-                        </ul>
-                    </div>
+                <li class="nav-item dropdown">
+                    <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="userDropdownBooking">
+                        <img style="width: 24px; height: 24px; object-fit: cover;" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60" alt="avatar" class="rounded-circle me-2" id="userAvatar">
+                        <span id="userName">David Lin</span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="userDropdownBooking">
+                        <li><button type="button" class="dropdown-item" id="logoutBtn">登出</button></li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
-</nav>    
+</nav>
+      
     <div class="my-booking">
       <div class="container">
           <div class="row">
@@ -295,7 +293,7 @@
         </div>
         
     </div>
-</footer>    <script src="../js/bookingHeaderLang.js"></script>
+</footer>    
     
   </body>
 </html>
