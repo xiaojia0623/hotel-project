@@ -9,7 +9,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './js/homeTopChoiceSwiper';
 import './js/topButtonJquery';
 import './js/slider';
-//import './js/loginButton';
 import './js/detailsForm';
 import './js/showToast';
 
