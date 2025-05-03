@@ -4,15 +4,16 @@
 
 ### 首頁畫面
 ![網頁版首頁預覽](assets/images/web-home-page.png)
-![手機版首頁預覽](assets/images/web-home-page.png)
+![手機版首頁預覽](assets/images/mobile-home-page.png) ![平版首頁預覽](assets/images/pad-home-page.png)
+![漢堡條顯示header](assets/images/hamburger.png)
 
 ### 飯店列表
 ![網頁版訂房飯店列表](assets/images/web-hotel-list.png)
-![手機版訂房飯店列表](assets/images/web-home-page.png)
+![手機版訂房飯店列表](assets/images/mobile-hotel-list.png)  ![平版訂房飯店列表](assets/images/pad-hotel-list.png)
 
 ### 飯店詳細頁面
 ![網頁版訂房飯店詳細頁面](assets/images/web-hotel-detail.png)
-![手機版訂房飯店詳細頁面](assets/images/web-hotel-detail.png)
+![手機版訂房飯店詳細頁面](assets/images/mobile-hotel-detail.png) ![平版訂房飯店詳細頁面](assets/images/mobile-hotel-detail.png)
 
 ## 悠宿 EasyStay — 練習訂房平台切版專案
 這是一個向知名住宿網站致敬的切版練習作品，模擬訂房平台的基本功能。使用者可瀏覽飯店資訊，也可註冊與登入帳號，體驗完整的使用流程。
