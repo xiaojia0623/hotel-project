@@ -1,7 +1,7 @@
 # 🏨 Hotel Booking Website
 
 ## 專案畫面預覽
-
+[住宿飯店網站](https://xiaojia0623.github.io/hotel-project/)
 ### 首頁畫面
 ![網頁版首頁預覽](assets/images/web-home-page.png)
 ![手機版首頁預覽](assets/images/mobile-home-page.png) ![平版首頁預覽](assets/images/pad-home-page.png)
