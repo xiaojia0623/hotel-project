@@ -13,7 +13,7 @@
 
 ### 飯店詳細頁面
 ![網頁版訂房飯店詳細頁面](assets/images/web-hotel-detail.png)
-![手機版訂房飯店詳細頁面](assets/images/mobile-hotel-detail.png) ![平版訂房飯店詳細頁面](assets/images/mobile-hotel-detail.png)
+![手機版訂房飯店詳細頁面](assets/images/mobile-hotel-detail.png) ![平版訂房飯店詳細頁面](assets/images/pad-hotel-detail.png)
 
 ## 悠宿 EasyStay — 練習訂房平台切版專案
 這是一個向知名住宿網站致敬的切版練習作品，模擬訂房平台的基本功能。使用者可瀏覽飯店資訊，也可註冊與登入帳號，體驗完整的使用流程。
